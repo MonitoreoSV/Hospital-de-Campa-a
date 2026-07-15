@@ -840,7 +840,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
    seguro, el estatus de plataforma y la gestión de usuarios/roles
    llegan en la V3 (tras mapear las hojas existentes).
    ============================================================ */
-const VERSION = "8.96";
+const VERSION = "8.98";
 const API_URL = "https://script.google.com/a/macros/goes.gob.sv/s/AKfycbyXlrIzxJiMVfJi5iW_AmzkkQqmrPNkJAdAphj5LWyU2zUwJO4A0O2rdtx5oYp4WDGb4g/exec"; // V3: URL /exec del Web App
 const LOGO_SRC = "data:image/png;base64,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";
 
@@ -2111,6 +2111,22 @@ const ESTRATEGIA = {
 };
 /* Punteros de "ya sincronizado" para append (por tabla). */
 const SYNCED = {};
+/* v8.97 PULL INCREMENTAL — RXS[t] = nº de filas de esa hoja YA RECIBIDAS del
+   servidor. Es un CONTADOR DE FILAS del Sheet, NO una hora → inmune a la hora
+   de cada teléfono. En memoria (no se persiste): al recargar arranca en 0 → el
+   1er pull baja completo y los siguientes solo traen lo nuevo. Solo append-only;
+   Pacientes/Vet y todo lo upsert siguen bajando completo. */
+const RXS = {};
+function rxsGet(t){ return RXS[t]||0; }
+function rxsSet(t,n){ RXS[t]=n; }
+/* RXA[t] = ANCLA: el tsMs de la última fila recibida. El servidor solo aplica el
+   recorte si la fila en la posición RXS tiene EXACTAMENTE este tsMs; si no
+   coincide (filas borradas/corridas, offset inválido), responde COMPLETO y el
+   cliente deduplica → autocura sin relojes. */
+const RXA = {};
+function rxaGet(t){ return RXA[t]||""; }
+function rxaSet(t,a){ RXA[t]=a; }
+const INCR = {triage:1,consulta:1,estabilizacion:1,movimientos:1,consultaVet:1,estabVet:1,sesiones:1,auditoria:1,seguimientoTraslado:1};
 function syncedGet(t){ if(SYNCED[t]!==undefined) return SYNCED[t]; const v=parseInt(localGet("hcrm:sync:"+t)||"0",10); SYNCED[t]=isNaN(v)?0:v; return SYNCED[t]; }
 function syncedSet(t,n){ SYNCED[t]=n; localSet("hcrm:sync:"+t, String(n)); }
 /* Instantánea de lo último sincronizado en tablas upsert: permite enviar
@@ -2169,7 +2185,7 @@ async function reescribirTablas(tablas){
     await apiPost({op:"pushTable", sheet:HOJAS[t], rows:filas});
     // Reajustar el control de sincronización según la estrategia de la tabla
     const est=(ESTRATEGIA[t]||{}).op;
-    if(est==="appendRows"){ syncedSet(t, filas.length); }
+    if(est==="appendRows"){ syncedSet(t, filas.length); if(INCR[t]){ rxsSet(t,0); rxaSet(t,""); } /* v8.98: reescritura → re-sincroniza completo en el próximo pull */ }
     else if(est==="upsertById"){ SNAP[t]={}; snapActualiza(t, filas); }
   }
 }
@@ -2179,7 +2195,8 @@ async function pullRemoto(){
   // Guardia PUSH-FIRST: nunca reemplazar los datos locales mientras haya
   // cambios en cola sin subir — primero sube lo pendiente, luego se baja.
   if(pendientesSync()>0){ lanzarSync(); return; }
-  const res = await fetch(API_URL + (API_URL.indexOf("?")>=0?"&":"?") + "action=readAll" + (CLAVE_API?"&k="+encodeURIComponent(CLAVE_API):""), {method:"GET"});
+  const _desde={}; TABLAS.forEach(t=>{ if(INCR[t] && HOJAS[t]) _desde[HOJAS[t]]={n:rxsGet(t),a:rxaGet(t)}; });
+  const res = await fetch(API_URL + (API_URL.indexOf("?")>=0?"&":"?") + "action=readAll" + (CLAVE_API?"&k="+encodeURIComponent(CLAVE_API):"") + "&desde="+encodeURIComponent(JSON.stringify(_desde)), {method:"GET"}); /* v8.97: desde = mapa hoja→filas ya recibidas (pull incremental) */
   const txt = await res.text();
   let j; try{ j=JSON.parse(txt); }catch(e){ throw new Error("Respuesta no válida (HTTP "+res.status+"). "+_pistaConexion(txt)); }
   if(!j.ok) throw new Error(j.error||"Error al leer el Sheet.");
@@ -2189,7 +2206,29 @@ async function pullRemoto(){
     // carga aparte con listaUsuarios. NO la pisamos aquí o borraríamos la lista
     // que el admin ya cargó (y el auto-refresco de 60s la dejaría vacía).
     if(t==="usuarios") return;
-    const filas=(j.data&&j.data[HOJAS[t]])||[]; DB[t]=filas.map(f=>coerce(t,f)); const est=(ESTRATEGIA[t]||{}).op; if(est==="appendRows") syncedSet(t, Math.max(syncedGet(t), DB[t].length)); /* v8.96 (1c): el puntero NUNCA retrocede — evita re-subir filas ya guardadas cuando un readAll parcial baja menos filas en pico */ if(est==="upsertById"){ SNAP[t]={}; snapActualiza(t, serializa(t)); } if(localSetTabla(t, JSON.stringify(serializa(t)))) cambios=true;
+    const filas=(j.data&&j.data[HOJAS[t]])||[]; const est=(ESTRATEGIA[t]||{}).op;
+    const _tot=(j.tot && typeof j.tot[HOJAS[t]]==="number") ? j.tot[HOJAS[t]] : null;
+    if(INCR[t] && _tot!==null){
+      // v8.98 PULL INCREMENTAL (validado con simulador multi-teléfono):
+      // 'filas' son SOLO las nuevas después de la posición RXS, y el backend lo
+      // CONFIRMÓ devolviendo 'tot' (total de filas de la hoja) — si tot falta
+      // (backend viejo) se cae al camino completo de abajo. Fusión con dedup por
+      // tsMs (no duplica filas propias optimistas). RXS = tot (verdad del
+      // servidor, autocura si la hoja encoge). RXA = tsMs de la última fila
+      // recibida (ancla que el server valida antes de recortar). Ningún reloj
+      // participa: posiciones + identidad de fila → inmune a husos horarios.
+      const nuevas=filas.map(f=>coerce(t,f));
+      if(nuevas.length){ const vistos={}; DB[t].forEach(r=>{ const kk=r&&r.tsMs; if(kk!=null&&kk!=="") vistos[String(kk)]=1; }); nuevas.forEach(r=>{ const kk=r&&r.tsMs; if(kk==null||kk===""||!vistos[String(kk)]) DB[t].push(r); }); cambios=true; }
+      rxsSet(t, _tot);
+      if(filas.length){ const _ult=filas[filas.length-1]; rxaSet(t, String((_ult&&_ult.tsMs!=null)?_ult.tsMs:"")); }
+      syncedSet(t, Math.max(syncedGet(t), DB[t].length));
+    } else {
+      DB[t]=filas.map(f=>coerce(t,f));
+      if(INCR[t]){ rxsSet(t,0); rxaSet(t,""); } /* backend sin parche → completo (conducta v8.96) */
+      if(est==="appendRows") syncedSet(t, Math.max(syncedGet(t), DB[t].length));
+      if(est==="upsertById"){ SNAP[t]={}; snapActualiza(t, serializa(t)); }
+    }
+    if(localSetTabla(t, JSON.stringify(serializa(t)))) cambios=true;
   });
   PULL_HUBO_CAMBIOS=cambios;
   ULTIMO_PULL = Date.now();
@@ -2232,7 +2271,7 @@ async function diagnoseRemoto(){
 
 async function cargarTodo(){
   if(MODO==="sheet"){ await pullRemoto(); }
-  else { TABLAS.forEach(t=>{ const raw=lzD(localGet("hcrm:"+t)); if(raw!=null) LS_CACHE[t]=raw; DB[t]=raw?JSON.parse(raw).map(f=>coerce(t,f)):[]; if(PRUNABLES[t]) syncedSet(t,0); }); }
+  else { TABLAS.forEach(t=>{ const raw=lzD(localGet("hcrm:"+t)); if(raw!=null) LS_CACHE[t]=raw; DB[t]=raw?JSON.parse(raw).map(f=>coerce(t,f)):[]; if(PRUNABLES[t]) syncedSet(t,0); if(INCR[t]){ rxsSet(t,0); rxaSet(t,""); } }); }
 }
 async function commit(tabla){
   if(MODO==="sheet"){
@@ -6032,7 +6071,7 @@ async function sembrarDemo(){
 /* ==================== ARRANQUE ==================== */
 (async function init(){
   // Carga LOCAL instantánea (no bloquea por la red). Usuarios NO se cachea local.
-  TABLAS.forEach(t=>{ try{ if(t==="usuarios"){ DB[t]=[]; return; } const raw=lzD(localGet("hcrm:"+t)); if(raw!=null) LS_CACHE[t]=raw; DB[t]=raw?JSON.parse(raw).map(f=>coerce(t,f)):[]; if(PRUNABLES[t]) syncedSet(t,0); }catch(e){ DB[t]=[]; } });
+  TABLAS.forEach(t=>{ try{ if(t==="usuarios"){ DB[t]=[]; return; } const raw=lzD(localGet("hcrm:"+t)); if(raw!=null) LS_CACHE[t]=raw; DB[t]=raw?JSON.parse(raw).map(f=>coerce(t,f)):[]; if(PRUNABLES[t]) syncedSet(t,0); if(INCR[t]){ rxsSet(t,0); rxaSet(t,""); } }catch(e){ DB[t]=[]; } });
   restaurarOLogin();
   // Sincroniza con el Sheet en segundo plano (si hay API_URL)
   if(MODO==="sheet"){
